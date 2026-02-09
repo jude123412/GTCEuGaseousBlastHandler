@@ -56,46 +56,44 @@ public class MaterialRecipeHandler {
         }
 
         // Recipe Removal to solve Conflicts in Electric Blast Furnace
-        // Must Be run Before Processing Handler Recipes are made!
+        // Must Be run After Processing Handler Recipes are made!
         // Removes all Recipes that produce an Ingot or Hot Ingot With either Programmed Circuit 1 or 2
 
-        if (blastTemp > 0) {
+        if (material.hasProperty(PropertyKey.BLAST)) {
+            removeRecipesByInputs(BLAST_RECIPES,
+                    OreDictUnifier.get(dustPrefix, material),
+                    IntCircuitIngredient.getIntegratedCircuit(1));
 
             removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                    OreDictUnifier.get(dust, material),
-                    IntCircuitIngredient.getIntegratedCircuit(1)
-            });
-
-            removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                    OreDictUnifier.get(dust, material),
+                    OreDictUnifier.get(dustPrefix, material),
                     IntCircuitIngredient.getIntegratedCircuit(2)
             }, new FluidStack[] {
                     Nitrogen.getFluid(1000)
             });
 
             removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                    OreDictUnifier.get(dust, material),
+                    OreDictUnifier.get(dustPrefix, material),
                     IntCircuitIngredient.getIntegratedCircuit(2)
             }, new FluidStack[] {
                     Helium.getFluid(100)
             });
 
             removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                    OreDictUnifier.get(dust, material),
+                    OreDictUnifier.get(dustPrefix, material),
                     IntCircuitIngredient.getIntegratedCircuit(2)
             }, new FluidStack[] {
                     Argon.getFluid(50)
             });
 
             removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                    OreDictUnifier.get(dust, material),
+                    OreDictUnifier.get(dustPrefix, material),
                     IntCircuitIngredient.getIntegratedCircuit(2)
             }, new FluidStack[] {
                     Neon.getFluid(25)
             });
 
             removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                    OreDictUnifier.get(dust, material),
+                    OreDictUnifier.get(dustPrefix, material),
                     IntCircuitIngredient.getIntegratedCircuit(2)
             }, new FluidStack[] {
                     Krypton.getFluid(10)
@@ -108,41 +106,40 @@ public class MaterialRecipeHandler {
             });
 
             if (ingotProperty.getMagneticMaterial() != null) {
-                removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                        OreDictUnifier.get(dust, ingotProperty.getMagneticMaterial()),
-                        IntCircuitIngredient.getIntegratedCircuit(1)
-                });
+                removeRecipesByInputs(BLAST_RECIPES,
+                        OreDictUnifier.get(dustPrefix, ingotProperty.getMagneticMaterial()),
+                        IntCircuitIngredient.getIntegratedCircuit(1));
 
                 removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                        OreDictUnifier.get(dust, ingotProperty.getMagneticMaterial()),
+                        OreDictUnifier.get(dustPrefix, ingotProperty.getMagneticMaterial()),
                         IntCircuitIngredient.getIntegratedCircuit(2)
                 }, new FluidStack[] {
                         Nitrogen.getFluid(1000)
                 });
 
                 removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                        OreDictUnifier.get(dust, ingotProperty.getMagneticMaterial()),
+                        OreDictUnifier.get(dustPrefix, ingotProperty.getMagneticMaterial()),
                         IntCircuitIngredient.getIntegratedCircuit(2)
                 }, new FluidStack[] {
                         Helium.getFluid(100)
                 });
 
                 removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                        OreDictUnifier.get(dust, ingotProperty.getMagneticMaterial()),
+                        OreDictUnifier.get(dustPrefix, ingotProperty.getMagneticMaterial()),
                         IntCircuitIngredient.getIntegratedCircuit(2)
                 }, new FluidStack[] {
                         Argon.getFluid(50)
                 });
 
                 removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                        OreDictUnifier.get(dust, ingotProperty.getMagneticMaterial()),
+                        OreDictUnifier.get(dustPrefix, ingotProperty.getMagneticMaterial()),
                         IntCircuitIngredient.getIntegratedCircuit(2)
                 }, new FluidStack[] {
                         Neon.getFluid(25)
                 });
 
                 removeRecipesByInputs(BLAST_RECIPES, new ItemStack[] {
-                        OreDictUnifier.get(dust, ingotProperty.getMagneticMaterial()),
+                        OreDictUnifier.get(dustPrefix, ingotProperty.getMagneticMaterial()),
                         IntCircuitIngredient.getIntegratedCircuit(2)
                 }, new FluidStack[] {
                         Krypton.getFluid(10)
