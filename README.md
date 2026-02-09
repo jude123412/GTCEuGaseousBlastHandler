@@ -7,6 +7,7 @@ This mod introduces eight distinct gas tiers, each with:
 - A duration multiplier applied to the base recipe time
 - Full recipe generation for every tier
 This makes gas usage more strategic, rewarding higher‑tier gases with faster processing at lower consumption.
+
 Gas Tier Table
 | Gas Tier     | Amount Consumed | Duration Multiplier |
 |--------------|-----------------|---------------------|
@@ -18,6 +19,7 @@ Gas Tier Table
 | Krypton      | 600 mB          | Duration * 0.50     |
 | Xenon        | 500 mB          | Duration * 0.40     |
 | Oganesson    | 250 mB          | Duration * 0.25     |
+
 Stainless Steel Example
 | Gas Tier     | Resulting Duration (ticks) |
 |--------------|----------------------------|
