@@ -4,9 +4,8 @@
     "description": "Simply replaces the EBF Gas Tier recipes with recipes for each Gas Tier",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "logoFile": "",
-    "url": "",
-    "authorList": [],
-    "credits": "",
+    "url": "https://github.com/jude123412/GTCEuGaseousBlastHandler",
+    "authorList": ["xXjudeXx"],
+    "credits": "The GregTech CEU Authors for providing the buildscript for this mod",
     "dependencies": []
 }]
