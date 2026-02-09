@@ -1,7 +1,7 @@
 [{
     "modid": "${modid}",
     "name": "${modname}",
-    "description": "An example mod for Minecraft 1.12.2 with Forge",
+    "description": "Simply replaces the EBF Gas Tier recipes with recipes for each Gas Tier",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "logoFile": "",
