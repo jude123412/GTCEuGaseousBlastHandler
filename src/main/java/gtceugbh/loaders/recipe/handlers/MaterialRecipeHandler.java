@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.Materials.Krypton;
 import static gregtech.api.unification.material.Materials.Neon;
 import static gregtech.api.unification.material.Materials.Nitrogen;
 import static gregtech.api.unification.material.Materials.Oganesson;
+import static gregtech.api.unification.material.Materials.Radon;
 import static gregtech.api.unification.material.Materials.Xenon;
 import static gregtech.api.unification.ore.OrePrefix.dust;
 import static gregtech.api.unification.ore.OrePrefix.ingot;
@@ -163,63 +164,71 @@ public class MaterialRecipeHandler {
                     .fluidInputs(Nitrogen.getFluid(1000))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.90)).EUt(energy)
-                    .buildAndRegister();
-
-            BLAST_RECIPES.recipeBuilder()
-                    .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
-                    .outputs(ingotStack)
-                    .fluidInputs(Helium.getFluid(900))
-                    .circuitMeta(2)
-                    .blastFurnaceTemp(blastTemp)
                     .duration((int) (duration * 0.80)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Neon.getFluid(800))
+                    .fluidInputs(Helium.getFluid(1000))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.70)).EUt(energy)
+                    .duration((int) (duration * 0.72)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Argon.getFluid(700))
+                    .fluidInputs(Argon.getFluid(850))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.60)).EUt(energy)
+                    .duration((int) (duration * 0.64)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Krypton.getFluid(600))
+                    .fluidInputs(Radon.getFluid(700))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.50)).EUt(energy)
+                    .duration((int) (duration * 0.56)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Xenon.getFluid(500))
+                    .fluidInputs(Neon.getFluid(550))
+                    .circuitMeta(2)
+                    .blastFurnaceTemp(blastTemp)
+                    .duration((int) (duration * 0.48)).EUt(energy)
+                    .buildAndRegister();
+
+            BLAST_RECIPES.recipeBuilder()
+                    .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
+                    .outputs(ingotStack)
+                    .fluidInputs(Krypton.getFluid(400))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
                     .duration((int) (duration * 0.40)).EUt(energy)
                     .buildAndRegister();
 
+            BLAST_RECIPES.recipeBuilder()
+                    .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
+                    .outputs(ingotStack)
+                    .fluidInputs(Xenon.getFluid(250))
+                    .circuitMeta(2)
+                    .blastFurnaceTemp(blastTemp)
+                    .duration((int) (duration * 0.32)).EUt(energy)
+                    .buildAndRegister();
+
             if (Oganesson.hasFluid()) BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, ingotProperty.getMagneticMaterial(), 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Oganesson.getFluid(250))
+                    .fluidInputs(Oganesson.getFluid(100))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.25)).EUt(energy)
+                    .duration((int) (duration * 0.24)).EUt(energy)
                     .buildAndRegister();
-
         }
 
         if (material.hasProperty(PropertyKey.BLAST)) {
@@ -237,61 +246,70 @@ public class MaterialRecipeHandler {
                     .fluidInputs(Nitrogen.getFluid(1000))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.90)).EUt(energy)
+                    .duration((int) (duration * 0.8)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, material, 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Helium.getFluid(900))
+                    .fluidInputs(Helium.getFluid(1000))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.80)).EUt(energy)
+                    .duration((int) (duration * 0.72)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, material, 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Neon.getFluid(800))
+                    .fluidInputs(Argon.getFluid(850))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.70)).EUt(energy)
+                    .duration((int) (duration * 0.64)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, material, 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Argon.getFluid(700))
+                    .fluidInputs(Radon.getFluid(700))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.60)).EUt(energy)
+                    .duration((int) (duration * 0.56)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, material, 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Krypton.getFluid(600))
+                    .fluidInputs(Neon.getFluid(550))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.50)).EUt(energy)
+                    .duration((int) (duration * 0.48)).EUt(energy)
                     .buildAndRegister();
 
             BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, material, 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Xenon.getFluid(500))
+                    .fluidInputs(Krypton.getFluid(400))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
                     .duration((int) (duration * 0.40)).EUt(energy)
                     .buildAndRegister();
 
+            BLAST_RECIPES.recipeBuilder()
+                    .input(dustPrefix, material, 1)
+                    .outputs(ingotStack)
+                    .fluidInputs(Xenon.getFluid(250))
+                    .circuitMeta(2)
+                    .blastFurnaceTemp(blastTemp)
+                    .duration((int) (duration * 0.32)).EUt(energy)
+                    .buildAndRegister();
+
             if (Oganesson.hasFluid()) BLAST_RECIPES.recipeBuilder()
                     .input(dustPrefix, material, 1)
                     .outputs(ingotStack)
-                    .fluidInputs(Oganesson.getFluid(250))
+                    .fluidInputs(Oganesson.getFluid(100))
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
-                    .duration((int) (duration * 0.25)).EUt(energy)
+                    .duration((int) (duration * 0.24)).EUt(energy)
                     .buildAndRegister();
 
             VACUUM_RECIPES.recipeBuilder()
