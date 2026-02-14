@@ -12,23 +12,11 @@ Gas Tier Table
 | Gas Tier     | Amount Consumed | Duration Multiplier |
 |--------------|-----------------|---------------------|
 | No Gas       | --              | Duration            |
-| Nitrogen     | 1000 mB         | Duration * 0.90     |
-| Helium       | 900 mB          | Duration * 0.80     |
-| Neon         | 800 mB          | Duration * 0.70     |
-| Argon        | 700 mB          | Duration * 0.60     |
-| Krypton      | 600 mB          | Duration * 0.50     |
-| Xenon        | 500 mB          | Duration * 0.40     |
-| Oganesson    | 250 mB          | Duration * 0.25     |
-
-Stainless Steel Example
-| Gas Tier     | Resulting Duration (ticks) |
-|--------------|----------------------------|
-| No Gas       | 1100                       |
-| Nitrogen     | 1100 * 0.90 = 990          |
-| Helium       | 1100 * 0.80 = 880          |
-| Neon         | 1100 * 0.70 = 770          |
-| Argon        | 1100 * 0.60 = 660          |
-| Krypton      | 1100 * 0.50 = 550          |
-| Xenon        | 1100 * 0.40 = 440          |
-| Oganesson    | 1100 * 0.25 = 275          |
-
+| Nitrogen     | 1000 mB         | Duration * 0.80     |
+| Helium       | 1000 mB         | Duration * 0.72     |
+| Argon        | 850 mB          | Duration * 0.64     |
+| Radon        | 700 mB          | Duration * 0.56     |
+| Neon         | 550 mB          | Duration * 0.48     |
+| Krypton      | 400 mB          | Duration * 0.40     |
+| Xenon        | 250 mB          | Duration * 0.32     |
+| Oganesson    | 100 mB          | Duration * 0.24     |
