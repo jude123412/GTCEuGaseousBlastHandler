@@ -20,3 +20,7 @@ Gas Tier Table
 | Krypton      | 400 mB          | Duration * 0.40     |
 | Xenon        | 250 mB          | Duration * 0.32     |
 | Oganesson    | 100 mB          | Duration * 0.24     |
+
+## Credits
+- Recipe time/amount concept: [GTNH's GT5 Unofficial](https://github.com/GTNewHorizons/GT5-Unofficial).
+- Build script foundation: [GregTech CEu Buildscript](https://github.com/GregTechCEu/GregTech).
