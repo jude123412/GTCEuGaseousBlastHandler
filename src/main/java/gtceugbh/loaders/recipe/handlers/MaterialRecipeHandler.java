@@ -4,7 +4,6 @@ import static gregtech.api.GTValues.MV;
 import static gregtech.api.GTValues.VA;
 import static gregtech.api.recipes.GTRecipeHandler.removeRecipesByInputs;
 import static gregtech.api.recipes.RecipeMaps.BLAST_RECIPES;
-import static gregtech.api.recipes.RecipeMaps.VACUUM_RECIPES;
 import static gregtech.api.unification.material.Materials.Argon;
 import static gregtech.api.unification.material.Materials.Helium;
 import static gregtech.api.unification.material.Materials.Krypton;
@@ -14,13 +13,10 @@ import static gregtech.api.unification.material.Materials.Oganesson;
 import static gregtech.api.unification.material.Materials.Radon;
 import static gregtech.api.unification.material.Materials.Xenon;
 import static gregtech.api.unification.ore.OrePrefix.dust;
-import static gregtech.api.unification.ore.OrePrefix.ingot;
-import static gregtech.api.unification.ore.OrePrefix.ingotHot;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import gregtech.api.fluids.store.FluidStorageKeys;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.Material;
@@ -42,9 +38,6 @@ public class MaterialRecipeHandler {
         int blastTemp = property.getBlastTemperature();
         int duration = property.getDurationOverride();
         int energy = property.getEUtOverride();
-        int vacuumEnergy = property.getVacuumEUtOverride() != -1 ? property.getVacuumEUtOverride() : VA[MV];
-        int vacuumDuration = property.getVacuumDurationOverride() != -1 ? property.getVacuumDurationOverride() :
-                (int) material.getMass() * 3;
 
         IngotProperty ingotProperty = material.getProperty(PropertyKey.INGOT);
 
@@ -98,12 +91,6 @@ public class MaterialRecipeHandler {
                     IntCircuitIngredient.getIntegratedCircuit(2)
             }, new FluidStack[] {
                     Krypton.getFluid(10)
-            });
-
-            removeRecipesByInputs(VACUUM_RECIPES, new ItemStack[] {
-                    OreDictUnifier.get(ingotHot, material),
-            }, new FluidStack[] {
-                    Helium.getFluid(FluidStorageKeys.LIQUID, 500)
             });
 
             if (ingotProperty.getMagneticMaterial() != null) {
@@ -310,13 +297,6 @@ public class MaterialRecipeHandler {
                     .circuitMeta(2)
                     .blastFurnaceTemp(blastTemp)
                     .duration((int) (duration * 0.24)).EUt(energy)
-                    .buildAndRegister();
-
-            VACUUM_RECIPES.recipeBuilder()
-                    .input(ingotHot, material, 1)
-                    .output(ingot, material, 1)
-                    .duration(vacuumDuration)
-                    .EUt(vacuumEnergy)
                     .buildAndRegister();
         }
     }
