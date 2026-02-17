@@ -1,22 +1,15 @@
 package gtceugbh.unification;
 
-import gregtech.api.fluids.FluidBuilder;
-import gregtech.api.fluids.store.FluidStorageKeys;
-import gregtech.api.unification.Elements;
-import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.info.MaterialIconSet;
-import gtceugbh.Tags;
-import gtceugbh.api.util.GBHLogger;
+import static gregtech.api.unification.material.Materials.Oganesson;
+
 import net.minecraft.util.ResourceLocation;
+
 import org.jetbrains.annotations.NotNull;
 
-import static gregtech.api.unification.material.Materials.CertusQuartz;
-import static gregtech.api.unification.material.Materials.NetherQuartz;
-import static gregtech.api.unification.material.Materials.Oganesson;
-import static gregtech.api.unification.material.Materials.Oxygen;
-import static gregtech.api.unification.material.Materials.Redstone;
-import static gregtech.api.unification.material.Materials.Silicon;
-import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
+import gregtech.api.unification.Elements;
+import gregtech.api.unification.material.Material;
+import gtceugbh.Tags;
+import gtceugbh.api.util.GBHLogger;
 
 public class GBHMaterials {
 
